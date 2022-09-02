@@ -25,7 +25,7 @@ pipeline {
         stage('Create Role') {
             when { expression{ return params.blCreateIAMRole } }
             steps {
-                withAWS(credentials: 'AWS_JR8', region: 'ap-southeast-2') {
+                withAWS(credentials: 'AWS_Shengni', region: 'ap-southeast-2') {
                     // Create Lambda role
                     sh '''
                         aws iam create-role \
